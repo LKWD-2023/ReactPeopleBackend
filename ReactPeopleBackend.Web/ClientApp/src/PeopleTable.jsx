@@ -68,8 +68,7 @@ class PeopleTable extends React.Component {
 
     onDeleteClick = async id => {
         await axios.post('/api/people/delete', { id });
-        this.refreshPeople();
-
+        await this.refreshPeople();
     }
 
     onSetToDeleteChange = id => {
@@ -87,6 +86,7 @@ class PeopleTable extends React.Component {
     onDeleteAllClick = async () => {
         await axios.post('/api/people/deletemany', { ids: this.state.peopleToDelete });
         await this.refreshPeople();
+
     }
 
     checkAll = () => {

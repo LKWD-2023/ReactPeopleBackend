@@ -1,8 +1,7 @@
 import React from 'react';
 
-function AddEditPersonRow(props) {
-    const { isEditMode, onTextChange, onAddClick, onUpdateClick, onCancelClick } = props;
-    const { firstName, lastName, age } = props.person;
+function AddEditPersonRow({ isEditMode, onTextChange, onAddClick, onUpdateClick, onCancelClick, person }) {
+    const { firstName, lastName, age } = person;
     return (
         <div className="row" style={{ marginBottom: 20 }}>
             <div className="col-md-3">
